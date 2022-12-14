@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form style="border:1px solid #ccc">
+        <div class="container">
+            <h1>Регистрация</h1>
+            <p>Пожалуйста, заполните эту форму, чтобы создать учетную запись.</p>
+            <hr>
+            <label for="personName"><b>Имя</b></label>
+            <input type="text" placeholder=" Ведите Ваше имя" id="personName"><br>
+
+            <label for="userSurname"><b>Фамилия</b></label>
+            <input type="text" placeholder=" Ведите Вашу фамилию" id="userSurname" name="surname" required><br>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder=" Ведите Email" id="email" name="email" required><br>
+        
+            <label for="psw"><b>Пароль</b></label>
+            <input type="password" placeholder=" Ведите пароль" name="psw" required><br>
+        
+            <label for="psw-repeat"><b>Повторите пароль</b></label>
+            <input type="password" placeholder="Повторите пароль" name="psw-repeat" required><br>
+            
+            <div class="buttons">
+                <button type="button" class="cancelbtn">Отменить</button>
+                <button type="submit" onclick="check();" id="signupbtn">Регистрация</button>
+            </div>
+            <div id="errorMessage"></div>
+        </div>
+    </form>
+    <script src="index.js"></script>
+</body>
+<style>
+    form {
+        width: 60%;
+        background-color: #ffffff;
+    }
+
+    .container {
+        width: 75%;
+        margin: 5%;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 10px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    }
+
+    .buttons {
+        background-color: #4CAF50;
+        padding: 12px 20px;
+        margin: 10px 0;
+        border: none;
+        cursor: pointer;
+        width: 96%;
+    }
+</style>
+</html>

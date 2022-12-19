@@ -10,28 +10,32 @@
     <form style="border:1px solid #ccc">
         <div class="container">
             <h1>Регистрация</h1>
-            <p>Пожалуйста, заполните эту форму, чтобы создать учетную запись.</p>
+            <h4>Пожалуйста, заполните эту форму, чтобы создать учетную запись.</h4>
             <hr>
             <label for="personName"><b>Имя</b></label>
             <input type="text" placeholder=" Ведите Ваше имя" id="personName"><br>
+            <p id="errorMessageName"></p>
 
             <label for="userSurname"><b>Фамилия</b></label>
-            <input type="text" placeholder=" Ведите Вашу фамилию" id="userSurname" name="surname" required><br>
+            <input type="text" placeholder=" Ведите Вашу фамилию" id="userSurname"><br>
+            <p id="errorMessageSurname"></p>
 
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder=" Ведите Email" id="email" name="email" required><br>
+            <label for="userMail"><b>Email</b></label>
+            <input type="text" placeholder=" Ведите Email" id="userMail"><br>
+            <p id="errorMessageEmail"></p>
         
             <label for="psw"><b>Пароль</b></label>
-            <input type="password" placeholder=" Ведите пароль" name="psw" required><br>
+            <input type="password" placeholder=" Ведите пароль" id="psw"><br>
+            <p id="errorMessagePsw"></p>
         
             <label for="psw-repeat"><b>Повторите пароль</b></label>
-            <input type="password" placeholder="Повторите пароль" name="psw-repeat" required><br>
+            <input type="password" placeholder="Повторите пароль" id="psw-repeat"><br>
+            <p id="errorMessagePsw-repeat"></p>
             
             <div class="buttons">
                 <button type="button" class="cancelbtn">Отменить</button>
-                <button type="submit" onclick="check();" id="signupbtn">Регистрация</button>
+                <button type="button" onclick="check();" id="signupbtn">Регистрация</button>
             </div>
-            <div id="errorMessage"></div>
         </div>
     </form>
     <script src="index.js"></script>
@@ -54,6 +58,13 @@
         display: inline-block;
         border: none;
         background: #f1f1f1;
+    }
+
+    p {
+        margin: 0%;
+        padding: 0%;
+        font-weight: 300;
+        color: red;
     }
 
     .buttons {
